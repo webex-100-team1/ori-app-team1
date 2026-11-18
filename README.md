@@ -1,4 +1,8 @@
-# アプリの名前
+# 電卓アプリ（仮）
+
+ふつうに使える電卓に、便利機能とゲームが付いたアプリ。
+
+ページ・データの形・各ページの中身は [設計書](docs/design.md) にまとめてある。
 
 ## 動かし方
 
@@ -11,14 +15,13 @@ npm run dev
 
 | ページ | 担当 | ファイル |
 | --- | --- | --- |
-| ログイン | | `src/pages/login/` |
-| ホーム | | `src/pages/home/` |
-
-## データの形
-
-| コレクション | フィールド |
-| --- | --- |
-| | |
+| ログイン | （できている） | `src/pages/login/` |
+| 一覧 | | `src/pages/home/` |
+| ノーマル電卓 | | `src/pages/calculator/` |
+| マイページ | | `src/pages/mypage/` |
+| 割り勘 | | `src/pages/warikan/` |
+| いたずら電卓 | | `src/pages/prank/` |
+| スロット | | `src/pages/slot/` |
 
 ## AI に書いてもらうとき
 
