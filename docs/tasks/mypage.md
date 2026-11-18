@@ -11,7 +11,6 @@
 - 一覧に戻るリンクがある
 
 使うデータ：
-
 | コレクション | フィールド |
 | --- | --- |
 | `achievements` | `uid`・`userName`・`name`（実績の名前）・`createdAt` |
@@ -30,12 +29,12 @@
 
 Firebase のコンソールで、`achievements` コレクションにドキュメントを 1 件足す。フィールドは次のとおり。
 
-| フィールド | 型 | 値 |
-| --- | --- | --- |
-| `uid` | string | 自分の UID（コンソールの Authentication の画面でコピーする） |
-| `userName` | string | 自分の名前 |
-| `name` | string | `ふるえる数字` |
-| `createdAt` | number | `1763450000000` |
+| フィールド  | 型     | 値                                                           |
+| ----------- | ------ | ------------------------------------------------------------ |
+| `uid`       | string | 自分の UID（コンソールの Authentication の画面でコピーする） |
+| `userName`  | string | 自分の名前                                                   |
+| `name`      | string | `ふるえる数字`                                               |
+| `createdAt` | number | `1763450000000`                                              |
 
 - コンソールの `achievements` に 1 件入っていれば OK
 
