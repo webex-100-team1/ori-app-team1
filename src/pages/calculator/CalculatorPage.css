@@ -3,20 +3,11 @@
   margin: 40px auto;
 }
 
-.calculator-display {
-  font-size: 40px;
+.display {
+  font-size: 36px;
   text-align: right;
-  padding: 16px;
-  margin-bottom: 12px;
-  background: #222;
-  color: white;
+  padding: 12px;
+  min-height: 48px;
+  border: 2px solid #888;
   border-radius: 8px;
-  min-height: 56px;
-  overflow: hidden;
-}
-
-.calculator-buttons {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 8px;
 }

@@ -9,7 +9,6 @@ import MyPage from "./pages/mypage/MyPage.jsx";
 import WarikanPage from "./pages/warikan/WarikanPage.jsx";
 import PrankPage from "./pages/prank/PrankPage.jsx";
 import SlotPage from "./pages/slot/SlotPage.jsx";
-import CalculatorPage from "./pages/calculator/CalculatorPage.jsx";
 
 function App() {
   const [user, setUser] = useState(null);
