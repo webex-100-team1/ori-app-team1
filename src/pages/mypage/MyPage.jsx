@@ -5,10 +5,6 @@ import { Link } from "react-router";
 import "./MyPage.css";
 
 function MyPage(props) {
-  if (props.user === null) {
-    return <p>ログインしてください</p>;
-  }
-
   const [achievements, setAchievements] = useState([]);
 
   const getAchievements = async () => {
@@ -19,20 +15,23 @@ function MyPage(props) {
         orderBy("createdAt", "desc"),
       ),
     );
+    const newAchievements = snapshot.docs.map((doc) => ({
+      id: doc.id,
+      ...doc.data(),
+    }));
+
+    setAchievements(newAchievements);
   };
-
-  const newAchievements = snapshot.docs.map((doc) => ({
-    id: doc.id,
-    ...doc.data(),
-  }));
-
-  setAchievements(newAchievements);
 
   useEffect(() => {
     if (props.user !== null && props.user !== undefined) {
       getAchievements();
     }
   }, []);
+
+  if (props.user === null || props.user === undefined) {
+    return <p>ログインしてください</p>;
+  }
 
   return (
     <div className="mypage">
@@ -43,13 +42,15 @@ function MyPage(props) {
 
       {achievements.length === 0 ? <p>まだ実績がありません</p> : ""}
 
-      <div key={achievements.id}>
-        <p>{achievements.id}</p>
-        <p>
-          解放日時
-          {new DataTransfer(achievements.createdAt).tolocalString("ja-JP")}
-        </p>
-      </div>
+      {achievements.map((achievement) => (
+        <div key={achievement.id}>
+          <p>{achievement.name}</p>
+          <p>
+            開放日時：
+            {new Date(achievement.createdAt).toLocaleString("ja-JP")}
+          </p>
+        </div>
+      ))}
 
       <Link to="/">一覧に戻る</Link>
     </div>
