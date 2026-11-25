@@ -9,6 +9,7 @@ import MyPage from "./pages/mypage/MyPage.jsx";
 import WarikanPage from "./pages/warikan/WarikanPage.jsx";
 import PrankPage from "./pages/prank/PrankPage.jsx";
 import SlotPage from "./pages/slot/SlotPage.jsx";
+import CalculatorPage from "./pages/calculator/CalculatorPage.jsx";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -39,6 +40,7 @@ function App() {
         <Route path="/warikan" element={<WarikanPage user={user} />} />
         <Route path="/prank" element={<PrankPage user={user} />} />
         <Route path="/slot" element={<SlotPage user={user} />} />
+        <Route path="/calculator" element={<CalculatorPage />} />
       </Routes>
     </BrowserRouter>
   );
