@@ -39,6 +39,7 @@ function App() {
         <Route path="/warikan" element={<WarikanPage user={user} />} />
         <Route path="/prank" element={<PrankPage user={user} />} />
         <Route path="/slot" element={<SlotPage user={user} />} />
+        <Route path="/calculator" element={<CalculatorPage />} />
       </Routes>
     </BrowserRouter>
   );
